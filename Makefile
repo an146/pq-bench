@@ -9,4 +9,4 @@ c-heap: heap.c
 	gcc -O2 --std=c99 -o $@ $^
 
 ocaml-heap: heap.ml
-	ocamlfind ocamlopt -package base -linkpkg -o $@ $^
+	ocamlfind ocamlopt -o $@ $^
