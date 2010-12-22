@@ -1,5 +1,6 @@
 c_heap
 ocaml_heap
+ocaml_set
 *.o
 *.cmi
 *.cmx
