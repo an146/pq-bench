@@ -5,8 +5,8 @@ do_test ()
 }
 
 echo === heap sort ===
-do_test "time ./c-heap 4000000 4000000"
-do_test "time ./ocaml-heap 4000000 4000000"
+do_test "time ./c_heap 4000000 4000000"
+do_test "time ./ocaml_heap 4000000 4000000"
 echo === priority queue ===
-do_test "time ./c-heap 100 4000000"
-do_test "time ./ocaml-heap 100 4000000"
+do_test "time ./c_heap 100 4000000"
+do_test "time ./ocaml_heap 100 4000000"

@@ -1,5 +1,5 @@
-c-heap
-ocaml-heap
+c_heap
+ocaml_heap
 *.o
 *.cmi
 *.cmx
