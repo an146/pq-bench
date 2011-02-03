@@ -60,21 +60,21 @@ let heap_pop h =
 let main () =
    if Array.length argv < 3 then
       failwith (sprintf "usage: %s size count" argv.(0));
-      let size = int_of_string argv.(1)
-      and count = int_of_string argv.(2) in
-      let heap = heap_create size in
-      Random.init 0;
-      let process_elt () =
-         ignore (heap_pop heap)
-      in
-      for i = 1 to count do
-         heap_push heap (Random.int 100);
-         if heap.size = size then
-            process_elt ()
-      done;
-      while heap.size > 0 do
+   let size = int_of_string argv.(1)
+   and count = int_of_string argv.(2) in
+   let heap = heap_create size in
+   Random.init 0;
+   let process_elt () =
+      ignore (heap_pop heap)
+   in
+   for i = 1 to count do
+      heap_push heap (Random.int 100);
+      if heap.size = size then
          process_elt ()
-      done
+   done;
+   while heap.size > 0 do
+      process_elt ()
+   done
 
 let _ = main()
 

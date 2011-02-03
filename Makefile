@@ -1,4 +1,6 @@
-TESTS=c_heap ocaml_heap ocaml_set
+# TESTS=c_heap ocaml_heap ocaml_set ocaml_fheap
+TESTS=c_heap ocaml_heap ocaml_fheap
+
 .PHONY: all clean
 all : ${TESTS}
 	@./test.sh
@@ -14,3 +16,6 @@ ocaml_heap: ocaml_heap.ml
 
 ocaml_set: ocaml_set.ml
 	ocamlfind ocamlopt -o $@ $^
+
+ocaml_fheap: ocaml_fheap.ml
+	ocamlfind ocamlopt -thread -package batteries -linkpkg -o $@ $^
