@@ -1,3 +1,5 @@
+#!/bin/bash
+
 do_test ()
 {
 	echo $1

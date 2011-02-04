@@ -13,7 +13,7 @@ let main () =
          heap := Heap.del_min !heap
       in
       for i = 1 to count do
-         heap := Heap.insert (Random.int 100) !heap;
+         heap := Heap.add (Random.int 100) !heap;
          if Heap.size !heap = size then
             process_elt ()
       done;

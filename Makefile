@@ -1,5 +1,4 @@
-# TESTS=c_heap ocaml_heap ocaml_set ocaml_fheap
-TESTS=c_heap ocaml_heap ocaml_fheap
+TESTS=c_heap ocaml_heap ocaml_set ocaml_fheap
 
 .PHONY: all clean
 all : ${TESTS}
